@@ -3,7 +3,7 @@ import { View, Text, StyleSheet } from "react-native";
 export default function Favourites() {
     return (
         <View style={styles.container}>
-            <Text style={styles.text}>Favourites</Text>
+            <Text style={styles.text}>Favourites Screen</Text>
         </View>
     );
 }

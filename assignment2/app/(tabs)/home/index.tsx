@@ -1,47 +1,29 @@
 import { View, Text, StyleSheet, ScrollView, Image } from "react-native";
 import { Link } from "expo-router";
+import { recipes } from "../../data/recipes";
 
 export default function HomeScreen() {
     return (
         <ScrollView style={styles.container}>
             <Text style={styles.header}>Recipes</Text>
-
-            <Link
-                href="/home/details?title=Spaghetti&content=A classic Italian pasta dish with tomato meat sauce."
-                style={styles.noteCard}
-            >
-                <Image
-                    // just found images from Google
-                    source={{ uri: "https://lilluna.com/wp-content/uploads/2014/07/spaghetti-recipe-resize-9.jpg" }}
-                    style={styles.image}
-                />
-
-                <Text style={styles.noteTitle}>Spaghetti</Text>
-            </Link>
-
-            <Link
-                href="/home/details?title=Chicken Tacos&content=Soft tortillas filled with seasoned chicken and covered with toppings."
-                style={styles.noteCard}
-            >
-                <Image
-                    source={{ uri: "https://hostthetoast.com/wp-content/uploads/2017/04/Crispy-Chicken-Tacos-with-Avocado-Buttermilk-Ranch-7.jpg" }}
-                    style={styles.image}
-                />
-
-                <Text style={styles.noteTitle}>Chicken Tacos</Text>
-            </Link>
-
-            <Link
-                href="/home/details?title=Avocado Toast&content=Toasted bread topped with fresh avocado and seasonings."
-                style={styles.noteCard}
-            >
-                <Image
-                    source={{ uri: "https://www.jessicagavin.com/wp-content/uploads/2020/07/avocado-toast-20-1200.jpg" }}
-                    style={styles.image}
-                />
-
-                <Text style={styles.noteTitle}>Avocado Toast</Text>
-            </Link>
+            {/* had to change this so it would take in data rather than just hardcoding the text information, so can toggle */}
+            {recipes.map((recipe) => (
+                <Link
+                // recipe id is which recipe it is (1,2,3, so on)
+                    key={recipe.id}
+                    href={{
+                        pathname: "/home/details",
+                        params: {
+                            title: recipe.title,
+                            content: recipe.description,
+                        },
+                    }}
+                    style={styles.noteCard}
+                >
+                    <Image source={{ uri: recipe.image }} style={styles.image} />
+                    <Text style={styles.noteTitle}>{recipe.title}</Text>
+                </Link>
+            ))}
         </ScrollView>
     );
 }
