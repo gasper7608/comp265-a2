@@ -9,12 +9,23 @@ export default function RootLayout() {
         title: "Notes",
         tabBarIcon: ({ color, focused }) => (
           <IconSymbol
-            name={'note'}
+            name={'restaurant'}
             size={24}
             color={color}
           />
         ),
       }} />
+      <Tabs.Screen name="(tabs)/favourites/index" options={{
+          title: "Favourites",
+          tabBarIcon: ({ color }) => (
+            <IconSymbol
+              name='heart.fill'
+              size={24}
+              color={color}
+            />
+          ),
+        }}
+      />
       <Tabs.Screen name="(tabs)/profile" options={{
         title: "Profile",
         tabBarIcon: ({ color, focused }) => (
