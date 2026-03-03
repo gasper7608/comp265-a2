@@ -6,7 +6,7 @@ export default function RootLayout() {
     <Tabs screenOptions={{ headerShown: false }}>
       <Tabs.Screen name="index" options={{ tabBarItemStyle: { display: "none" } }} />
       <Tabs.Screen name="(tabs)/home" options={{
-        title: "Notes",
+        title: "Recipes",
         tabBarIcon: ({ color, focused }) => (
           <IconSymbol
             name={'restaurant'}
