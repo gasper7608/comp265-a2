@@ -1,32 +1,33 @@
 import { View, Text, StyleSheet } from "react-native";
 import { Link } from "expo-router";
+import { ScrollView } from "react-native-reanimated/lib/typescript/Animated";
 
 export default function HomeScreen() {
     return (
-        <View style={styles.container}>
-            <Text style={styles.header}>My Notes</Text>
+        <ScrollView style={styles.container}>
+            <Text style={styles.header}>Recipes</Text>
 
             <Link
                 href="/home/details?title=Groceries&content=Milk, Eggs, Bread"
                 style={styles.noteCard}
             >
-                <Text style={styles.noteTitle}>Groceries</Text>
+                <Text style={styles.noteTitle}>Spaghetti</Text>
             </Link>
 
             <Link
                 href="/home/details?title=Homework&content=Finish React Native assignment"
                 style={styles.noteCard}
             >
-                <Text style={styles.noteTitle}>Homework</Text>
+                <Text style={styles.noteTitle}>Chicken Tacos</Text>
             </Link>
 
             <Link
                 href="/home/details?title=Workout Plan&content=Leg day at 5pm"
                 style={styles.noteCard}
             >
-                <Text style={styles.noteTitle}>Workout Plan</Text>
+                <Text style={styles.noteTitle}>Avocado Toast</Text>
             </Link>
-        </View>
+        </ScrollView>
     );
 }
 
@@ -43,12 +44,11 @@ const styles = StyleSheet.create({
         marginTop: 40,
     },
     noteCard: {
-        backgroundColor: "#ffe600",
+        backgroundColor: "#b8b8b8",
         padding: 18,
         borderRadius: 12,
         marginBottom: 15,
         color: "black",
-        // didn't know how to add shadow to card so had to look it up, used https://stackoverflow.com/questions/41320131/how-to-set-shadows-in-react-native-for-android
         elevation: 3,
     },
     noteTitle: {
