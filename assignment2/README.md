@@ -1,50 +1,17 @@
-# Welcome to your Expo app 👋
+# Reflection
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+1. What challenges did you face and how did you overcome them?
 
-## Get started
+I ran into a bunch of issues with this assignment, however I felt it definitely went better than the first one. I ran into small issues when I was initially setting up my app, like my GitHub was being difficult or my Android Studio glitching and trying to solve that. To fix these issues, it involved mostly searching it up and seeing if other people had similar problems, or just trying as many commands as I could think of in the terminal until it started working eventually.
 
-1. Install dependencies
+2. What new concepts or techniques did you learn during development?
 
-   ```bash
-   npm install
-   ```
+I learned how to actually use a switch/toggle like I tried to use last assignment. It actually is interactable, however doesn’t quite link to favourites tab yet so is not 100% functional, but I’m getting there. I also learned how to use a modal which we didn't do previously so that was pretty cool. 
 
-2. Start the app
+3. What improvements would you make if given more time?
 
-   ```bash
-   npx expo start
-   ```
+If given more time, I would have made a couple things more functional, like having the favourites toggle actually work and add recipes to the page. I also would have made the add recipe section more detailed like it would actually be. I couldn't figure out how to make each recipe details dynamic to show their own image and steps, so if I had more time, I would have liked to fix that. I also didn't really change anything in the profile/settings section so I could have done more there.
 
-In the output, you'll find options to open the app in a
+## Self-Assessment
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
-```
-
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+The rubric wasn't open so I can't judge exactly, but I think I did okay with this assignment. I definitely know I will be getting some marks off for a couple things I missed like maybe a screen or something, and minor errors, but I think overall it works, makes sense as an app concept, and has a fair bit of the requirements. I think this assignment could get an 80%.
