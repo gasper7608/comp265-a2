@@ -9,7 +9,7 @@ export default function HomeScreen() {
             {/* had to change this so it would take in data rather than just hardcoding the text information, so can toggle */}
             {recipes.map((recipe) => (
                 <Link
-                // recipe id is which recipe it is (1,2,3, so on)
+                    // recipe id is which recipe it is (1,2,3, so on)
                     key={recipe.id}
                     href={{
                         pathname: "/home/details",
@@ -24,6 +24,10 @@ export default function HomeScreen() {
                     <Text style={styles.noteTitle}>{recipe.title}</Text>
                 </Link>
             ))}
+            {/* got this from starter code from class */}
+            {<Link href="/home/add-recipe" style={styles.button}>
+                + Add Recipe
+            </Link>}
         </ScrollView>
     );
 }
@@ -58,5 +62,17 @@ const styles = StyleSheet.create({
         fontWeight: "600",
         marginBottom: 5,
         padding: 5,
+    },
+    button: {
+        alignSelf: "center",
+        backgroundColor: "#e53935",
+        color: "white",
+        fontSize: 16,
+        fontWeight: "600",
+        paddingVertical: 12,
+        paddingHorizontal: 20,
+        borderRadius: 25,
+        marginBottom: 20,
+        elevation: 3,
     },
 });

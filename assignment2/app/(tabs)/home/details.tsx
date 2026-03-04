@@ -1,8 +1,11 @@
-import { View, Text, StyleSheet, ScrollView, Image } from "react-native";
+import { View, Text, StyleSheet, ScrollView, Image, Switch } from "react-native";
 import { useLocalSearchParams } from "expo-router";
+import { useState } from "react";
 
 export default function DetailsScreen() {
     const { title, content } = useLocalSearchParams();
+    // setting favourites toggle to off to start and then people can choose to turn it on or not
+    const [isFavorite, setIsFavorite] = useState(false);
 
     return (
         <ScrollView style={styles.container}>
@@ -14,6 +17,15 @@ export default function DetailsScreen() {
                 }}
                 style={styles.image}
             />
+
+            <View style={styles.favoriteRow}>
+                <Text style={styles.favoriteText}>Add to Favourites</Text>
+                <Switch
+                    value={isFavorite}
+                    // turns it to favourite
+                    onValueChange={setIsFavorite}
+                />
+            </View>
 
             <Text style={styles.sectionHeader}>Description</Text>
             <Text style={styles.content}>{content}</Text>
@@ -67,5 +79,19 @@ const styles = StyleSheet.create({
         fontSize: 16,
         lineHeight: 24,
         color: "#444",
+    },
+    favoriteRow: {
+        flexDirection: "row",
+        justifyContent: "space-between",
+        alignItems: "center",
+        marginBottom: 20,
+        backgroundColor: "#e53935",
+        padding: 10,
+        borderRadius: 20,
+    },
+    favoriteText: {
+        fontSize: 16,
+        fontWeight: "500",
+        color: "white",
     },
 });
